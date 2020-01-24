@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/fondo">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/img_mujer"
+        android:src="@drawable/girl"
+        android:scaleType="fitStart"/>
+
+    <ImageView
+        android:id="@+id/ic_tent"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:src="@drawable/ic_tent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.8"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_tent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/user"
+            android:textColorHint="@color/light_grey"
+            android:ems="10"
+            android:textSize="17sp"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            android:textColorHint="@color/light_grey"
+            android:ems="10"
+            android:textSize="17sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_logIn"
+        app:layout_constraintEnd_toStartOf="@+id/idGuest"
+        app:layout_constraintStart_toStartOf="@id/linearLayout"
+        tools:layout_editor_absoluteY="456dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:background="@color/colorBtnLogIn"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"/>
+
+    <Button
+        android:id="@+id/idGuest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_guest"
+        app:layout_constraintStart_toEndOf="@+id/btnLogIn"
+        app:layout_constraintEnd_toEndOf="@id/linearLayout"
+        tools:layout_editor_absoluteY="456dp"
+        android:background="@color/colorBtnGuest"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvHelp"
+        android:text="@string/tv_help"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/btnLogIn"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AppLogin</string>
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <string name="btn_logIn">Log In</string>
+    <string name="btn_guest">Guest</string>
+    <string name="tv_help">Have you got an account? Register.</string>
+</resources>
